@@ -1,50 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8">
 <title>TOK</title>
-<link rel="stylesheet" href="style.css">
+<style>
+body {background:#000;color:#fff;font-family:sans-serif;}
+input,button{margin:5px;}
+#posts-container{margin-top:20px;}
+</style>
 </head>
 <body>
-<div class="page">
-  <header class="topbar">
-    <div class="brand">TOK</div>
-  </header>
 
-  <main class="container">
-    <section class="card auth-card">
-      <h2>Вход / Регистрация</h2>
-      <div class="cols">
-        <div class="col">
-          <label>Имя</label>
-          <input id="name" class="field" placeholder="Как тебя звать?" />
-          <label>Пароль</label>
-          <input id="pass" class="field" type="password" placeholder="Пароль" />
-          <div class="row" style="margin-top:10px">
-            <button id="btnRegister">Зарегистрироваться</button>
-            <button id="btnLogin" class="ghost">Войти</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<h2>Регистрация</h2>
+<input id="reg-name" placeholder="Имя">
+<input id="reg-pass" type="password" placeholder="Пароль">
+<button onclick="register()">Регистрация</button>
 
-  <footer class="footer">TOK — локальный прототип. Данные хранятся в браузере.</footer>
-</div>
+<h2>Вход</h2>
+<input id="login-name" placeholder="Имя">
+<input id="login-pass" type="password" placeholder="Пароль">
+<button onclick="login()">Войти</button>
+
+<h2>Новый пост</h2>
+<input id="post-text" placeholder="Что нового?">
+<button onclick="createPost()">Отправить</button>
+
+<h2>Лента</h2>
+<div id="posts-container"></div>
 
 <script src="script.js"></script>
-<script>
-document.getElementById('btnRegister').onclick = () => {
-  const n = document.getElementById('name').value.trim();
-  const p = document.getElementById('pass').value;
-  ui_register(n,p);
-};
-document.getElementById('btnLogin').onclick = () => {
-  const n = document.getElementById('name').value.trim();
-  const p = document.getElementById('pass').value;
-  ui_login(n,p);
-};
-</script>
 </body>
 </html>
