@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TOK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">TOK</div>
+    <nav class="nav">
+      <button id="navFeed">Лента</button>
+      <button id="navProfile">Профиль</button>
+      <button id="navMessages" class="active">Сообщения</button>
+      <button id="navLogout" class="ghost">Выйти</button>
+    </nav>
+  </header>
+
+  <main class="container messages-page">
+    <section class="card" style="width:280px">
+      <h3>Диалоги</h3>
+      <div id="dialogs"></div>
+    </section>
+
+    <section class="card" style="flex:1;margin-left:12px">
+      <div id="chatHeader" class="muted">Выберите диалог</div>
+      <div id="chatArea" class="chat-area"></div>
+      <div id="chatSend" style="display:none" class="row" >
+        <input id="chatInput" class="field" placeholder="Сообщение..." />
+        <button id="chatSendBtn">Отправить</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Сообщения хранятся локально.</footer>
+</div>
+
+<script src="script.js"></script>
+<script>
+initPage('messages');
+</script>
+</body>
+</html>

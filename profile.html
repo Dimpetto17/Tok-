@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TOK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">TOK</div>
+    <nav class="nav">
+      <button id="navFeed">Лента</button>
+      <button id="navProfile" class="active">Профиль</button>
+      <button id="navMessages">Сообщения</button>
+      <button id="navLogout" class="ghost">Выйти</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" id="profileCard">
+      <div class="profile-top">
+        <img id="profileAvatar" class="avatar" src="">
+        <div class="profile-info">
+          <h2 id="profileName"></h2>
+          <div id="profileId" class="muted"></div>
+          <textarea id="profileBio" class="field" rows="3" placeholder="Коротко о себе..."></textarea>
+          <div class="row" style="margin-top:8px">
+            <button id="saveProfile">Сохранить</button>
+            <button id="changeAvatar" class="ghost">Загрузить аватар</button>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border-color:#222;margin-top:14px" />
+      <h3>Мои посты</h3>
+      <div id="myPosts"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Профиль — редактируй себя. Аватар хранится локально.</footer>
+</div>
+
+<script src="script.js"></script>
+<script>
+initPage('profile');
+</script>
+</body>
+</html>

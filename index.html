@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TOK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">TOK</div>
+  </header>
+
+  <main class="container">
+    <section class="card auth-card">
+      <h2>Вход / Регистрация</h2>
+      <div class="cols">
+        <div class="col">
+          <label>Имя</label>
+          <input id="name" class="field" placeholder="Как тебя звать?" />
+          <label>Пароль</label>
+          <input id="pass" class="field" type="password" placeholder="Пароль" />
+          <div class="row" style="margin-top:10px">
+            <button id="btnRegister">Зарегистрироваться</button>
+            <button id="btnLogin" class="ghost">Войти</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">TOK — локальный прототип. Данные хранятся в браузере.</footer>
+</div>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('btnRegister').onclick = () => {
+  const n = document.getElementById('name').value.trim();
+  const p = document.getElementById('pass').value;
+  ui_register(n,p);
+};
+document.getElementById('btnLogin').onclick = () => {
+  const n = document.getElementById('name').value.trim();
+  const p = document.getElementById('pass').value;
+  ui_login(n,p);
+};
+</script>
+</body>
+</html>

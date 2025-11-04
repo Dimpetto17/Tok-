@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TOK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">TOK</div>
+    <nav class="nav">
+      <button id="navFeed" class="active">Лента</button>
+      <button id="navProfile">Профиль</button>
+      <button id="navMessages">Сообщения</button>
+      <button id="navLogout" class="ghost">Выйти</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" id="createSection" style="display:none">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <div class="user-mini"><img id="meAvatar" class="avatar small" src=""><div id="meName" class="muted"></div></div>
+        <div><button id="toggleCreate" class="ghost">Новый пост</button></div>
+      </div>
+
+      <div id="createForm" style="margin-top:10px;display:none">
+        <textarea id="postText" class="field" rows="3" placeholder="О чём думаешь?"></textarea>
+        <input id="postImg" type="file" accept="image/*" />
+        <div class="row" style="margin-top:8px">
+          <button id="btnPost">Опубликовать</button>
+          <button id="btnCancelPost" class="ghost">Отмена</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="feedCard">
+      <h2>Лента</h2>
+      <div id="posts"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Лента — все посты. Можно лайкать и комментировать.</footer>
+</div>
+
+<script src="script.js"></script>
+<script>
+initPage('feed');
+</script>
+</body>
+ </html>
